@@ -1,0 +1,15 @@
+package com.accion.geodot.util;
+
+public interface GeoDotConstants {
+
+	public static String SYSTEM="SYSTEM";
+	public static String UNDERSCORE="_";
+	public static String EMPTY_STRING="";
+	public static int ZERO=0;
+	public static int SIX=6;
+	
+	public static String  TECHNICAL_ERROR="Technical Error";
+	public static String  NOT_FOUND_ERROR="Given resource not found!";
+	
+	
+}
