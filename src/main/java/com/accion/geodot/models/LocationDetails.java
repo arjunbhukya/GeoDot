@@ -28,13 +28,13 @@ public class LocationDetails implements Serializable {
 	private String locationUUID;
 	
 	@Column(name = "LANGITUDE")
-	private String langitude;
+	private Double langitude;
 	
 	@Column(name = "LATITUDE")
-	private String latitude;
+	private Double latitude;
 	
 	@Column(name = "ALTITUDE")
-	private String altitude;
+	private Double altitude;
 	
 	@Column(name = "created_by")
 	private String createdBy = null;
@@ -107,24 +107,24 @@ public class LocationDetails implements Serializable {
 		this.locationUUID = locationUUID;
 	}
 		
-	public String getLangitude() {
+	public Double getLangitude() {
 		return langitude;
 	}
 
-	public void setLangitude(String langitude) {
+	public void setLangitude(Double langitude) {
 		this.langitude = langitude;
 	}
 
-	public String getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(String latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
-	public String getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
-	public void setAltitude(String altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 

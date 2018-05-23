@@ -4,44 +4,51 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 @XmlRootElement
 public class LocationDetailsDO implements Serializable {
 
 	private static final long serialVersionUID = 4404889333741198476L;
 
+	@JsonInclude(Include.NON_NULL)
 	private String locationUUID;
 
-	private String langitude;
+	@JsonInclude(Include.NON_NULL)
+	private Double langitude;
 
-	private String latitude;
+	@JsonInclude(Include.NON_NULL)
+	private Double latitude;
 
-	private String altitude;
+	@JsonInclude(Include.NON_NULL)
+	private Double altitude;
 
 	public String getLocationUUID() {
 		return locationUUID;
 	}
 
-	public String getLangitude() {
+	public Double getLangitude() {
 		return langitude;
 	}
 
-	public void setLangitude(String langitude) {
+	public void setLangitude(Double langitude) {
 		this.langitude = langitude;
 	}
 
-	public String getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(String latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public String getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
 
-	public void setAltitude(String altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 

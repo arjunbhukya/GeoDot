@@ -43,6 +43,10 @@ public class GeoDotServiceImpl implements GeoDotService {
 				throw new NotFoundException("Resource not found");
 			}
 
+		}
+
+		catch (NotFoundException nfe) {
+			throw nfe;
 		} catch (Exception ex) {
 			throw new SystemException();
 		}
@@ -52,13 +56,13 @@ public class GeoDotServiceImpl implements GeoDotService {
 	@Override
 	@Transactional
 	public void deleteGeoDotDetails(String uuid) throws NotFoundException, SystemException {
-		LocationDetails locationDetails=geoDotDAO.getGeoDotDetails(uuid);
-		if(locationDetails==null) {
+		LocationDetails locationDetails = geoDotDAO.getGeoDotDetails(uuid);
+		if (locationDetails == null) {
 			throw new NotFoundException("Resource not found");
 		}
 		try {
 			geoDotDAO.deleteGeoDotDetails(uuid);
-		}catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new SystemException();
 		}
 	}
